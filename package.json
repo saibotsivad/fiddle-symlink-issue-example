@@ -1,0 +1,15 @@
+{
+  "name": "demo-symlink-issue",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "ncp": "^2.0.0",
+    "symlink-cli": "^1.0.0"
+  },
+  "scripts": {
+    "setup": "npm run clean && npm run setup:copy && npm run setup:symlink",
+    "clean": "cd app/build && rm -rf node_modules && npm install",
+    "setup:copy": "mkdir -p app/build/node_modules/@test1/plugins && ncp app/_plugins app/build/node_modules/@test1/plugins",
+    "setup:symlink": "mkdir -p app/build/node_modules/@test2 && symlink app/_plugins app/build/node_modules/@test2/plugins"
+  }
+}

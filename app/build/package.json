@@ -1,0 +1,8 @@
+{
+  "name": "app",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "markdown-it": "^12.2.0"
+  }
+}
