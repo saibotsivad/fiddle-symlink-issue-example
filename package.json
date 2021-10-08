@@ -2,6 +2,9 @@
   "name": "demo-symlink-issue",
   "private": true,
   "type": "module",
+  "bin": {
+    "example": "./bin.sh"
+  },
   "dependencies": {
     "ncp": "^2.0.0",
     "symlink-cli": "^1.0.0"
